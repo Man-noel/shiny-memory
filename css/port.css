@@ -1,8 +1,12 @@
-*{margin: 0%;
+
+*{ margin:0%;
    font-family: Inconsolata,monospace;}
 
 h1{text-align: center;
-color: black;}
+color: white;}
+h2{text-align: center;
+    color: white;}
+    
 
 .box{
     display: flex;
@@ -10,35 +14,42 @@ color: black;}
     justify-content: space-between;
 
 }
-#block{
+#block{ /* tentei usar nth child pra mudar a imagem na 2a e 3a iteração do bloco, mas a imagem era sempre a mesma
+    sem dizer que a bendita da borda simplesmente desiste do trabalho dela em resolucoes maiores e fica um espaço
+    branco. */
+    border-color: black;  /* Eu tive a ideia de por a bg image como full, 100% width, porque tenho quase certeza
+    que se fosse 100 porcento, caberia sem nenhuma distorção em outras resoluções, mas acho a borda mais bonito, 
+    por um pouco então tentei forçar ela.*/
 display: block;
-width: 100%;
-height: 100%;
-border:none;
-margin-block: 0px;
-background: url(../img/china.png);
+border-style: solid;
+border-width: 260px  260px ;
+width: 61.35%;
+height: 10cm; /* assumo que a baderna de bordas que eu fiz impossibilita de eu aumentar o tamanho da imagem em*/
+background: url(../img/china.png)center fixed;
 background-size: cover;
 }
-
 #block2{
-    display: block;
-    width: 100%;
-    height: 100%;
-    border:none;
-    margin-block: 0px;
-    background: url(../img/verdant.jpg);
-    background-size: cover;
-    }
-    
+    border-color: black;
+display: block;
+border-style: solid;
+border-width: 260px  260px ;
+width: 61.35%;
+height: 10cm;
+background: url(../img/verdant.jpg)center fixed;
+background-size: cover;
+}
 #block3{
-    display: block;
-    width: 100%;
-    height: 100%;
-    border:none;
-    margin-block: 0px;
-    background: url(../img/moscow.png);
-    background-size: cover;
-    }
+    border-color: black;
+display: block;
+border-style: solid;
+border-width: 260px ;
+width: 61.35%;
+height: 10cm;
+background: url(../img/moscow.png)center fixed;
+background-size: cover;
+}
+body{background-color: black;}
+
 p.header{
     font-size: 32px;
     text-align: center;
@@ -47,10 +58,12 @@ p.header{
 }
 p.spec{
 text-align: center;
+color: white;
 
 }
-a {color: black;}
-#blank{
+a {color: white;}
+#blank{ /*  Esse é o tipo de abominação que nem sei se era necessário, mas eu to naquele ponto que me afundei tanto,
+    que honestamente, desde que "funcione" não reclamarei.*/
   visibility: hidden;
     margin-top: 17cm;
 }
@@ -69,4 +82,5 @@ a {color: black;}
     font-size: 32px;
  text-align: center;
  text-decoration: underline;
+ border-bottom: 4em;
 }
